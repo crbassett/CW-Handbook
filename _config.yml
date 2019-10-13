@@ -24,7 +24,6 @@ url: "https://master.d3tlpociqdd60v.amplifyapp.com" # the base hostname & protoc
 sass:
   sass_dir: css
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
 
