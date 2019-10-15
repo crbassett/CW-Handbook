@@ -5,15 +5,13 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Texts</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Tunes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Authors</a>
-      </li>
+		{% for node in site.pages %}
+			{% if node.navigation == "primary" %}
+			<li class="nav-item {% if node.url == page.url %}active{% endif %}">
+			<a class="nav-link" href="{{ node.url }}">{{ node.title }}</a>
+			</li>
+			{% endif %}
+		{% endfor %}
     </ul>
     <form class="form-inline mt-2 mt-md-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search Won't Work" aria-label="Search">
@@ -21,3 +19,4 @@
     </form>
   </div>
 </nav>
+

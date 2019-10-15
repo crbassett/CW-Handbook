@@ -14,15 +14,25 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: 'Christian Worship: Handbook'
-email: 
-- caleb.bassett@gmail.com
+email: caleb.bassett@gmail.com
 description: 'A public handbook of research information about the hymns published in Christian Worship: Hymnal.'
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://master.d3tlpociqdd60v.amplifyapp.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 sass:
   sass_dir: css
+collections_dir: collections
+collections:
+  texts:
+    output: true
+    permalink: /text/:name
+  tunes:
+    output: true
+    permalink: /tune/:title
+  authors:
+    output: true
+    permalink: /author/:name
 markdown: kramdown
 plugins:
   - jekyll-feed

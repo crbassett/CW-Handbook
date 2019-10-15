@@ -1,0 +1,15 @@
+---
+title: Texts
+layout: default
+navigation: primary
+---
+
+<h1>Texts</h1>
+
+<div class="col-12">
+	<ul>
+	{% for node in site.texts %}
+	<li><a href="{{ node.url }}">{{ node.title }}</a>
+	{% endfor %}
+	</ul>
+</div>
